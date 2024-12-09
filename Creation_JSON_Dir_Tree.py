@@ -28,6 +28,7 @@ def analyze_directory(base_path):
         dir_size = get_directory_size(root)
         # Ajouter les informations du répertoire à la liste
         data.append({"nom": root, "taille": dir_size})
+        print(".",end="")
     return data
 
 
@@ -65,7 +66,7 @@ def main():
 
     print("Analyse en cours...")
     directory_data = analyze_directory(base_directory)
-
+    print()
     print(f"Enregistrement des résultats dans {output_file}...")
     save_to_json(directory_data, output_file)
 
